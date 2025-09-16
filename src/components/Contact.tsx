@@ -1,11 +1,11 @@
-import { useState } from "react";
-import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/components/ui/use-toast";
-import { Mail, MapPin, Phone, Github, Linkedin, Send, MessageCircle } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, MessageCircle, Send } from "lucide-react";
+import { useState } from "react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -29,7 +29,7 @@ const Contact = () => {
       title: "Message Sent!",
       description: "Thank you for reaching out. I'll get back to you soon!",
     });
-    
+
     // Reset form
     setFormData({
       name: '',
@@ -43,19 +43,13 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "john.smith@example.com",
-      href: "mailto:john.smith@example.com"
-    },
-    {
-      icon: Phone,
-      label: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567"
+      value: "ulwan.nashihun@gmail.com",
+      href: "mailto:ulwan.nashihun@gmail.com"
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "San Francisco, CA",
+      value: "Jakarta, Indonesia",
       href: "#"
     }
   ];
@@ -64,19 +58,19 @@ const Contact = () => {
     {
       icon: Linkedin,
       label: "LinkedIn",
-      href: "https://linkedin.com/in/johnsmith",
+      href: "https://linkedin.com/in/ulwan/",
       color: "hover:text-[#0077B5]"
     },
     {
       icon: Github,
-      label: "GitHub", 
-      href: "https://github.com/johnsmith",
+      label: "GitHub",
+      href: "https://github.com/ulwan",
       color: "hover:text-[#333]"
     },
     {
       icon: Mail,
       label: "Email",
-      href: "mailto:john.smith@example.com",
+      href: "mailto:ulwan.nashihun@gmail.com",
       color: "hover:text-primary"
     }
   ];
@@ -95,7 +89,7 @@ const Contact = () => {
               to solve complex challenges with innovative machine learning solutions.
             </p>
           </div>
-          
+
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <Card className="p-8 hover-lift fade-in-left">
@@ -105,7 +99,7 @@ const Contact = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-foreground">Send a Message</h3>
               </div>
-              
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="space-y-2">
@@ -132,7 +126,7 @@ const Contact = () => {
                     />
                   </div>
                 </div>
-                
+
                 <div className="space-y-2">
                   <Label htmlFor="subject">Subject</Label>
                   <Input
@@ -144,7 +138,7 @@ const Contact = () => {
                     required
                   />
                 </div>
-                
+
                 <div className="space-y-2">
                   <Label htmlFor="message">Message</Label>
                   <Textarea
@@ -157,14 +151,14 @@ const Contact = () => {
                     required
                   />
                 </div>
-                
+
                 <Button type="submit" className="w-full" size="lg">
                   <Send className="w-5 h-5 mr-2" />
                   Send Message
                 </Button>
               </form>
             </Card>
-            
+
             {/* Contact Information */}
             <div className="space-y-8 fade-in-right">
               <Card className="p-8">
@@ -187,7 +181,7 @@ const Contact = () => {
                   ))}
                 </div>
               </Card>
-              
+
               <Card className="p-8">
                 <h3 className="text-xl font-bold text-foreground mb-6">Connect Online</h3>
                 <div className="flex space-x-4">
@@ -205,7 +199,7 @@ const Contact = () => {
                   ))}
                 </div>
               </Card>
-              
+
               <Card className="p-8 bg-primary/5 border-primary/20">
                 <h3 className="text-xl font-bold text-foreground mb-4">Available for:</h3>
                 <ul className="space-y-2 text-muted-foreground">

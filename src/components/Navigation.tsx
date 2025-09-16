@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Download } from "lucide-react";
+import { Download, Menu, X } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -55,7 +55,7 @@ const Navigation = () => {
             onClick={() => scrollToSection('home')}
             className="text-xl font-bold text-foreground hover:text-primary transition-colors"
           >
-            John Smith
+            Portfolio
           </button>
 
           {/* Desktop Navigation */}
@@ -64,9 +64,8 @@ const Navigation = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`font-medium transition-colors hover:text-primary ${
-                  activeSection === item.id ? 'text-primary' : 'text-foreground'
-                }`}
+                className={`font-medium transition-colors hover:text-primary ${activeSection === item.id ? 'text-primary' : 'text-foreground'
+                  }`}
               >
                 {item.label}
               </button>
@@ -98,9 +97,8 @@ const Navigation = () => {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`text-left font-medium transition-colors hover:text-primary ${
-                    activeSection === item.id ? 'text-primary' : 'text-foreground'
-                  }`}
+                  className={`text-left font-medium transition-colors hover:text-primary ${activeSection === item.id ? 'text-primary' : 'text-foreground'
+                    }`}
                 >
                   {item.label}
                 </button>

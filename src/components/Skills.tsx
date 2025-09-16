@@ -1,7 +1,7 @@
-import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
-import { Code, Brain, Cloud, Wrench } from "lucide-react";
+import { Brain, Cloud, Code, Wrench } from "lucide-react";
 
 const Skills = () => {
   const skillCategories = [
@@ -10,11 +10,8 @@ const Skills = () => {
       icon: Code,
       skills: [
         { name: "Python", level: 95 },
-        { name: "JavaScript/TypeScript", level: 85 },
         { name: "SQL", level: 90 },
-        { name: "R", level: 80 },
-        { name: "Java", level: 75 },
-        { name: "C++", level: 70 }
+        { name: "R", level: 80 }
       ]
     },
     {
@@ -25,49 +22,47 @@ const Skills = () => {
         { name: "TensorFlow/Keras", level: 90 },
         { name: "Scikit-learn", level: 95 },
         { name: "Hugging Face", level: 85 },
-        { name: "OpenCV", level: 80 },
-        { name: "Pandas/NumPy", level: 95 }
+        { name: "Agentic AI: ADK, AutoGen, LangGraph", level: 85 },
+        { name: "NVIDIA-Merlin", level: 98 }
       ]
     },
     {
       title: "Cloud & MLOps",
       icon: Cloud,
       skills: [
-        { name: "AWS (SageMaker, EC2, S3)", level: 90 },
-        { name: "Google Cloud Platform", level: 85 },
-        { name: "Docker & Kubernetes", level: 85 },
-        { name: "MLflow", level: 80 },
-        { name: "Apache Airflow", level: 75 },
-        { name: "Terraform", level: 70 }
+        { name: "Google Cloud Platform", level: 90 },
+        { name: "AWS", level: 80 },
+        { name: "Docker", level: 90 },
+        { name: "Kubernetes", level: 85 },
+        { name: "MLflow, ML Server", level: 80 },
+        { name: "CI/CD", level: 85 }
       ]
     },
     {
-      title: "Tools & Technologies",
+      title: "Data & Databases",
       icon: Wrench,
       skills: [
-        { name: "Git/GitHub", level: 95 },
-        { name: "Jupyter Notebooks", level: 95 },
-        { name: "Apache Spark", level: 80 },
-        { name: "MongoDB/PostgreSQL", level: 85 },
-        { name: "Redis", level: 75 },
-        { name: "FastAPI/Flask", level: 85 }
+        { name: "MongoDB", level: 95 },
+        { name: "MySQL/PostgreSQL", level: 90 },
+        { name: "Redis", level: 85 },
+        { name: "Milvus", level: 85 },
+        { name: "Elasticsearch", level: 80 },
+        { name: "BigQuery", level: 85 }
       ]
     }
   ];
 
   const technicalExpertise = [
     "Machine Learning",
-    "Deep Learning", 
+    "Deep Learning",
     "Computer Vision",
-    "Natural Language Processing",
+    "Large Language Models",
     "Time Series Analysis",
-    "Reinforcement Learning",
+    "Agentic AI",
     "MLOps & Model Deployment",
-    "Data Engineering",
-    "Statistical Analysis",
-    "A/B Testing",
-    "Model Optimization",
-    "Neural Architecture Search"
+    "Statistics & Probability",
+    "Architecture Design",
+    "Business Intelligence"
   ];
 
   return (
@@ -80,18 +75,18 @@ const Skills = () => {
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
           </div>
-          
+
           {/* Technical Skills with Progress Bars */}
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             {skillCategories.map((category, index) => (
-              <Card key={index} className="p-6 hover-lift fade-in-up" style={{animationDelay: `${index * 0.1}s`}}>
+              <Card key={index} className="p-6 hover-lift fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
                 <div className="flex items-center mb-6">
                   <div className="p-3 bg-primary/10 rounded-full mr-4">
                     <category.icon className="w-6 h-6 text-primary" />
                   </div>
                   <h3 className="text-xl font-bold text-foreground">{category.title}</h3>
                 </div>
-                
+
                 <div className="space-y-4">
                   {category.skills.map((skill, i) => (
                     <div key={i} className="space-y-2">
@@ -106,7 +101,7 @@ const Skills = () => {
               </Card>
             ))}
           </div>
-          
+
           {/* Areas of Expertise */}
           <div className="fade-in-up">
             <h3 className="text-2xl font-bold text-center mb-8 text-foreground">
@@ -115,9 +110,9 @@ const Skills = () => {
             <Card className="p-8 text-center">
               <div className="flex flex-wrap justify-center gap-3">
                 {technicalExpertise.map((expertise, index) => (
-                  <Badge 
-                    key={index} 
-                    variant="secondary" 
+                  <Badge
+                    key={index}
+                    variant="secondary"
                     className="text-sm py-2 px-4 bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 transition-colors"
                   >
                     {expertise}

@@ -1,6 +1,6 @@
-import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import profilePhoto from "@/assets/profile-photo.jpg";
+import { Badge } from "@/components/ui/badge";
+import { Card } from "@/components/ui/card";
 
 const About = () => {
   return (
@@ -13,19 +13,19 @@ const About = () => {
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
           </div>
-          
+
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="fade-in-left">
               <div className="relative">
-                <img 
-                  src={profilePhoto} 
-                  alt="John Smith - AI Engineer"
+                <img
+                  src={profilePhoto}
+                  alt="Ulwan - AI Engineer"
                   className="w-full max-w-md mx-auto rounded-2xl shadow-xl"
                 />
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-primary/20 to-transparent"></div>
               </div>
             </div>
-            
+
             <div className="fade-in-right">
               <Card className="p-8 hover-lift border-0 shadow-lg">
                 <h3 className="text-2xl font-semibold mb-6 text-foreground">
@@ -33,24 +33,29 @@ const About = () => {
                 </h3>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
-                    With over 5 years of experience in artificial intelligence and machine learning, 
-                    I specialize in developing scalable AI solutions that drive business value and 
-                    solve complex real-world problems.
+                    As an AI Engineer, I specialize in developing intelligent systems that solve real-world problems.
+                    With expertise spanning machine learning, deep learning, and natural language processing,
+                    I bridge the gap between cutting-edge research and practical applications.
                   </p>
+
                   <p>
-                    My expertise spans from deep learning and computer vision to natural language 
-                    processing and MLOps. I've successfully deployed AI systems in production 
-                    environments, serving millions of users worldwide.
+                    My journey in AI began with a fascination for how machines can learn and adapt.
+                    Today, I work with organizations to implement AI solutions that drive innovation,
+                    improve efficiency, and create competitive advantages in their respective industries.
                   </p>
+
                   <p>
-                    I'm passionate about bridging the gap between cutting-edge research and 
-                    practical applications, always staying at the forefront of AI innovation.
+                    I believe in the transformative power of AI to enhance human capabilities and
+                    am committed to developing ethical, responsible AI systems that benefit society.
                   </p>
                 </div>
-                
+
                 <div className="mt-8">
                   <h4 className="font-semibold mb-4 text-foreground">Specializations</h4>
                   <div className="flex flex-wrap gap-2">
+                    <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20">
+                      MLOps
+                    </Badge>
                     <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20">
                       Machine Learning
                     </Badge>
@@ -61,20 +66,20 @@ const About = () => {
                       Computer Vision
                     </Badge>
                     <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20">
-                      NLP
+                      LLM
                     </Badge>
                     <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20">
-                      MLOps
+                      AI Agents
                     </Badge>
                   </div>
                 </div>
-                
+
                 <div className="mt-8 p-4 bg-muted rounded-lg">
                   <div className="flex items-center justify-between text-sm">
-                    <span className="font-medium">📧 john.smith@example.com</span>
+                    <span className="font-medium">📧 ulwan.nashihun@gmail.com</span>
                   </div>
                   <div className="flex items-center justify-between text-sm mt-2">
-                    <span className="font-medium">📍 San Francisco, CA</span>
+                    <span className="font-medium">📍 Jakarta, Indonesia</span>
                   </div>
                 </div>
               </Card>

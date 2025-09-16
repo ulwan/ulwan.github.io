@@ -1,61 +1,60 @@
-import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { GraduationCap, Award, BookOpen } from "lucide-react";
+import { Card } from "@/components/ui/card";
+import { Award, BookOpen, GraduationCap } from "lucide-react";
 
 const Education = () => {
   const education = [
     {
-      degree: "Master of Science in Computer Science",
-      specialization: "Artificial Intelligence & Machine Learning",
-      school: "Stanford University",
-      location: "Stanford, CA",
-      period: "2017 - 2019",
-      gpa: "3.9/4.0",
+      degree: "Bachelor of Statistics in Mathematics and Natural Sciences",
+      specialization: "Business Industries",
+      school: "Islamic University of Indonesia",
+      location: "Yogyakarta, Indonesia",
+      period: "08/2012 - 08/2016",
+      gpa: "3.78/4.0",
       achievements: [
-        "Summa Cum Laude graduate",
-        "Outstanding Research Award in AI",
-        "Teaching Assistant for CS229 Machine Learning"
-      ]
-    },
-    {
-      degree: "Bachelor of Science in Computer Engineering",
-      specialization: "Software Systems & Mathematics Minor",
-      school: "UC Berkeley",
-      location: "Berkeley, CA", 
-      period: "2013 - 2017",
-      gpa: "3.8/4.0",
-      achievements: [
-        "Dean's Honor List (6 semesters)",
-        "ACM Programming Contest Finalist",
-        "Undergraduate Research in Computer Vision"
+        "Top 10 Best Papers - 2nd East Java Economic Forum (EJAVEC) by Bank Indonesia & Airlangga University",
+        "The winners of scientific writing competitions by Directorate of Libraries UII",
+        "Teaching Assistant for Programming Algorithms, Database, Management Information System, Time Series Analysis, Statistical Computing, Applied Multivariate Statistics"
       ]
     }
   ];
 
   const certifications = [
     {
-      name: "AWS Certified Machine Learning - Specialty",
-      issuer: "Amazon Web Services",
-      date: "2023",
-      credentialId: "AWS-MLS-2023-001"
+      name: "N8N Course`",
+      issuer: "N8N",
+      date: "2025",
+      credentialId: "ac4d9b9790b60a122643b82afc03fedf"
     },
     {
-      name: "Google Cloud Professional ML Engineer",
-      issuer: "Google Cloud",
-      date: "2022",
-      credentialId: "GCP-PMLE-2022-887"
+      name: "Python Programmer Track",
+      issuer: "DataCamp",
+      date: "2019",
+      credentialId: "#33,299"
     },
     {
-      name: "Deep Learning Specialization",
-      issuer: "Coursera (Andrew Ng)",
-      date: "2021",
-      credentialId: "COURSERA-DL-2021"
+      name: "Google Cloud Platform Fundamentals: Core Infrastructure",
+      issuer: "Coursera",
+      date: "2019",
+      credentialId: "FUVMUCPBEYA8"
     },
     {
-      name: "Certified Kubernetes Administrator",
-      issuer: "Cloud Native Computing Foundation",
-      date: "2022",
-      credentialId: "CKA-2022-445"
+      name: "Building Chatbots in Python Course",
+      issuer: "DataCamp",
+      date: "2018",
+      credentialId: "#7,360,706"
+    },
+    {
+      name: "Deep Learning in Python Course",
+      issuer: "DataCamp",
+      date: "2017",
+      credentialId: "#4,403,587"
+    },
+    {
+      name: "Fundamentals of Cloud Computing",
+      issuer: "Udemy",
+      date: "2017",
+      credentialId: "UC-PUQDUITF"
     }
   ];
 
@@ -69,12 +68,12 @@ const Education = () => {
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
           </div>
-          
+
           {/* Education */}
           <div className="mb-20">
             <div className="grid gap-8">
               {education.map((edu, index) => (
-                <Card key={index} className="p-8 hover-lift fade-in-up" style={{animationDelay: `${index * 0.2}s`}}>
+                <Card key={index} className="p-8 hover-lift fade-in-up" style={{ animationDelay: `${index * 0.2}s` }}>
                   <div className="flex items-start gap-4">
                     <div className="p-3 bg-primary/10 rounded-full">
                       <GraduationCap className="w-6 h-6 text-primary" />
@@ -93,7 +92,7 @@ const Education = () => {
                           <p className="text-primary font-medium">GPA: {edu.gpa}</p>
                         </div>
                       </div>
-                      
+
                       <div>
                         <h5 className="font-semibold mb-3 text-foreground flex items-center">
                           <Award className="w-4 h-4 mr-2 text-primary" />
@@ -114,7 +113,7 @@ const Education = () => {
               ))}
             </div>
           </div>
-          
+
           {/* Certifications */}
           <div>
             <h3 className="text-3xl font-bold text-center mb-12 text-foreground flex items-center justify-center">
@@ -123,7 +122,7 @@ const Education = () => {
             </h3>
             <div className="grid md:grid-cols-2 gap-6">
               {certifications.map((cert, index) => (
-                <Card key={index} className="p-6 hover-lift fade-in-up" style={{animationDelay: `${index * 0.1}s`}}>
+                <Card key={index} className="p-6 hover-lift fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
                       <h4 className="text-lg font-semibold text-foreground mb-2">{cert.name}</h4>
